@@ -1,14 +1,14 @@
-// Firebase config - replace with your project values
+// Firebase config
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
+    apiKey: "AIzaSyDcb2YvAUBfoSwk_-14Qf9ck1c1QWdU3_w",
     authDomain: "lyrical-bolt-470510-g3.firebaseapp.com",
     projectId: "lyrical-bolt-470510-g3",
-    storageBucket: "lyrical-bolt-470510-g3.appspot.com",
-    messagingSenderId: "YOUR_SENDER_ID",
-    appId: "YOUR_APP_ID"
+    storageBucket: "lyrical-bolt-470510-g3.appspot.com", // corrected
+    messagingSenderId: "23574584111",
+    appId: "1:23574584111:web:2eb92ba4d384718df05fda"
 };
 
-// Initialize Firebase
+// Initialize Firebase (compat version for auth)
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 
@@ -24,7 +24,7 @@ loginForm.addEventListener('submit', (e) => {
     auth.signInWithEmailAndPassword(email, password)
         .then(userCredential => {
             // Redirect to artisan page after login
-            window.location.href = "artisans.html";
+            window.location.href = "artisans.html"; 
         })
         .catch(error => {
             errorMessage.textContent = error.message;
@@ -33,6 +33,6 @@ loginForm.addEventListener('submit', (e) => {
 
 // Optional: handle signup link
 document.getElementById('signup-link').addEventListener('click', () => {
-    // Redirect to signup page
     window.location.href = "signup.html";
 });
+
