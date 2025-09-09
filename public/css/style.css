@@ -1,0 +1,8 @@
+body {
+    font-family: Arial, sans-serif;
+}
+header {
+    background: url('https://images.unsplash.com/photo-1598300059101-4c8f86a4f1c2?auto=format&fit=crop&w=1470&q=80') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+}
